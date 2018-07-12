@@ -1,0 +1,7 @@
+$("#AdminModal").modal('hide');
+$(".admin_nama").val('');
+$(".admin_email").val('');
+$(".admin_password").val('');
+
+$("#containeradmins").prepend('<%= j render @admin %>');
+$("#admin_<%= @admin.id %>").hide().fadeIn(1000);

@@ -1,0 +1,22 @@
+<%= form_for [:admin, @admin], :method => :put, remote: true do |f| %>
+        <form class="form">
+
+            <div class="form-group">
+              <label>Nama</label>
+             <%= f.text_field :nama, class: 'form-control' %>
+            </div>
+            <div class="form-group">
+            <label>Email</label>
+            <%= f.email_field :email, class: 'form-control' %>
+            </div>
+           <div class="form-group">
+            <label>Password</label>
+            <%= f.password_field :password, class: 'form-control' %>
+            </div>      
+            <br>
+            <div class="form-group">
+              <%= f.submit 'Simpan', class: 'btn btn-sm btn-primary' %>
+              <%= link_to 'Batal', :back, class: 'btn btn-sm btn-danger' %>
+            </div>
+        </form>
+<% end %>

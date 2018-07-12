@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= @settings.map(&:judul_website).join %></title>
+    <%= csrf_meta_tags %>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+  </head>
+
+<body class="text-center">
+  <style media="screen">
+    body { background-image: url(<%= image_path @settings.map(&:background_website).join %>) !important;
+           font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+           -webkit-background-size: cover;
+           -moz-background-size: cover;
+           background-size: cover;
+           -o-background-size: cover;
+            }
+  </style>
+  <div class="body"></div>
+  <div class="judul_website"><%= @settings.map(&:judul_website).join %></div>
+  <%= form_tag session_index_path, class: 'form-signin' do %>
+      <form class="form-signin">
+        <h1 class="h3 mb-3 font-weight-normal">Login</h1>
+        <%= text_field_tag :email, params[:email], placeholder: 'Email', class: 'form-control' %><br>
+        <%= password_field_tag :password, params[:password], placeholder: 'Password', class: 'form-control' %>
+        <%= submit_tag 'login', class: 'btn btn-primary btn-lg btn-block' %>
+        <p class="mt-5 mb-3 text-muted"><%= @settings.map(&:judul_footer).join %></p>
+      </form>
+  <% end %>
+  </body>
+</html>

@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  'no': 1
+  kata_indonesia: MyString
+  angka: 1
+  kata_biak: MyString
+
+two:
+  'no': 1
+  kata_indonesia: MyString
+  angka: 1
+  kata_biak: MyString

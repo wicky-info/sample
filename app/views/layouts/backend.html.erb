@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title><%= @sets.map(&:judul_backend).join %></title>
+    <%= csrf_meta_tags %>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    
+  </head>
+
+<body class="fixed-nav sticky-footer bg-dark" id="page-top">
+  <!-- Navigation-->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+    <%= link_to "#{ @sets.map(&:judul_backend).join}", admin_admins_url, class: 'navbar-brand' %>
+
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
+
+
+       <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Link">
+          <%= link_to admin_settings_url, class: 'nav-link' do %>
+             <i class="fa fa-fw fa-table"></i>
+            <span class="nav-link-text">Setting</span>
+          <% end %>
+        </li>
+
+       <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Link">
+          <%= link_to admin_admins_url, class: 'nav-link' do %>
+             <i class="fa fa-fw fa-table"></i>
+            <span class="nav-link-text">Admin</span>
+          <% end %>
+        </li>
+
+      </ul>
+
+      <ul class="navbar-nav ml-auto">
+        
+        <li class="nav-item">
+        <%= link_to logout_url, class: 'nav-link' do %>
+            <i class="fa fa-fw fa-sign-out"></i>Logout
+        <% end %>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div class="content-wrapper">
+    <div class="container-fluid">
+     <%= yield %>
+    </div>
+    <!-- /.container-fluid-->
+    <!-- /.content-wrapper-->
+    <footer class="sticky-footer">
+      <div class="container">
+        <div class="text-center">
+          <small><%= @sets.map(&:judul_website).join %></small>
+        </div>
+      </div>
+    </footer>
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+      <i class="fa fa-angle-up"></i>
+    </a>
+<script>
+    $('#myPasien').on('show.bs.modal', function (event) {
+  })
+</script>
+<script>
+  $(document).ready( function () {
+    $('#Benda').DataTable({
+      "oLanguage": {
+        "sSearch": "Pencarian:",
+        "sZeroRecords": "Data belum tersedia",
+         "sLengthMenu": "Tampilkan _MENU_ data ",
+         "sInfoFiltered": ", Pencarian dari _MAX_ data yang tersedia",
+         "sInfo": "_START_ sampai _END_  dari _TOTAL_ data yang ada",
+         "sInfoEmpty": "Data belum tersedia",
+         "oPaginate": {
+           "sNext": "Lanjut",
+            "sPrevious": "Kembali"
+         },
+    },
+
+    });
+} );
+</script>
+
+<script>
+  $(document).ready( function () {
+    $('#Bilangan').DataTable({
+      "oLanguage": {
+        "sSearch": "Pencarian:",
+        "sZeroRecords": "Data belum tersedia",
+         "sLengthMenu": "Tampilkan _MENU_ data ",
+         "sInfoFiltered": ", Pencarian dari _MAX_ data yang tersedia",
+         "sInfo": "_START_ sampai _END_  dari _TOTAL_ data yang ada",
+         "sInfoEmpty": "Data belum tersedia",
+         "oPaginate": {
+           "sNext": "Lanjut",
+            "sPrevious": "Kembali"
+         },
+    },
+
+    });
+} );
+</script>
+<script>
+  $(document).ready( function () {
+    $('#Milik').DataTable({
+      "oLanguage": {
+        "sSearch": "Pencarian:",
+        "sZeroRecords": "Data belum tersedia",
+         "sLengthMenu": "Tampilkan _MENU_ data ",
+         "sInfoFiltered": ", Pencarian dari _MAX_ data yang tersedia",
+         "sInfo": "_START_ sampai _END_  dari _TOTAL_ data yang ada",
+         "sInfoEmpty": "Data belum tersedia",
+         "oPaginate": {
+           "sNext": "Lanjut",
+            "sPrevious": "Kembali"
+         },
+    },
+
+    });
+} );
+</script>
+<script>
+  $(document).ready( function () {
+    $('#Orang').DataTable({
+      "oLanguage": {
+        "sSearch": "Pencarian:",
+        "sZeroRecords": "Data belum tersedia",
+         "sLengthMenu": "Tampilkan _MENU_ data ",
+         "sInfoFiltered": ", Pencarian dari _MAX_ data yang tersedia",
+         "sInfo": "_START_ sampai _END_  dari _TOTAL_ data yang ada",
+         "sInfoEmpty": "Data belum tersedia",
+         "oPaginate": {
+           "sNext": "Lanjut",
+            "sPrevious": "Kembali"
+         },
+    },
+
+    });
+} );
+</script>
+<script>
+  $(document).ready( function () {
+    $('#Hubung').DataTable({
+      "oLanguage": {
+        "sSearch": "Pencarian:",
+        "sZeroRecords": "Data belum tersedia",
+         "sLengthMenu": "Tampilkan _MENU_ data ",
+         "sInfoFiltered": ", Pencarian dari _MAX_ data yang tersedia",
+         "sInfo": "_START_ sampai _END_  dari _TOTAL_ data yang ada",
+         "sInfoEmpty": "Data belum tersedia",
+         "oPaginate": {
+           "sNext": "Lanjut",
+            "sPrevious": "Kembali"
+         },
+    },
+
+    });
+} );
+</script>
+<script>
+  $(document).ready( function () {
+    $('#Sifat').DataTable({
+      "oLanguage": {
+        "sSearch": "Pencarian:",
+        "sZeroRecords": "Data belum tersedia",
+         "sLengthMenu": "Tampilkan _MENU_ data ",
+         "sInfoFiltered": ", Pencarian dari _MAX_ data yang tersedia",
+         "sInfo": "_START_ sampai _END_  dari _TOTAL_ data yang ada",
+         "sInfoEmpty": "Data belum tersedia",
+         "oPaginate": {
+           "sNext": "Lanjut",
+            "sPrevious": "Kembali"
+         },
+    },
+
+    });
+} );
+</script>
+<script>
+  $(document).ready( function () {
+    $('#Tanya').DataTable({
+      "oLanguage": {
+        "sSearch": "Pencarian:",
+        "sZeroRecords": "Data belum tersedia",
+         "sLengthMenu": "Tampilkan _MENU_ data ",
+         "sInfoFiltered": ", Pencarian dari _MAX_ data yang tersedia",
+         "sInfo": "_START_ sampai _END_  dari _TOTAL_ data yang ada",
+         "sInfoEmpty": "Data belum tersedia",
+         "oPaginate": {
+           "sNext": "Lanjut",
+            "sPrevious": "Kembali"
+         },
+    },
+
+    });
+} );
+</script>
+<script>
+  $(document).ready( function () {
+    $('#Tunjuk').DataTable({
+      "oLanguage": {
+        "sSearch": "Pencarian:",
+        "sZeroRecords": "Data belum tersedia",
+         "sLengthMenu": "Tampilkan _MENU_ data ",
+         "sInfoFiltered": ", Pencarian dari _MAX_ data yang tersedia",
+         "sInfo": "_START_ sampai _END_  dari _TOTAL_ data yang ada",
+         "sInfoEmpty": "Data belum tersedia",
+         "oPaginate": {
+           "sNext": "Lanjut",
+            "sPrevious": "Kembali"
+         },
+    },
+
+    });
+} );
+</script>
+<script>
+  $('.dropdown-toggle').dropdown()
+</script>
+</body>
+</html>

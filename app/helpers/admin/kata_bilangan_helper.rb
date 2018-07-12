@@ -1,0 +1,2 @@
+module Admin::KataBilanganHelper
+end

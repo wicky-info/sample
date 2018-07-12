@@ -1,0 +1,7 @@
+$("#SettingModal").modal('hide');
+$(".setting_judul_website").val('');
+$(".setting_judul_website").val('');
+$(".setting_background").val('');
+
+$("#containersetting").prepend('<%= j render @setting %>');
+$("#setting_<%= @setting.id %>").hide().fadeIn(1000);

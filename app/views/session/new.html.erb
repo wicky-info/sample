@@ -1,0 +1,9 @@
+<h2>Test login</h2>
+
+<%= form_tag session_index_path do %>
+<p>Email</p>
+<%= email_field_tag :email %>
+<p>Password</p>
+<%= password_field_tag :password %><br>
+<%= submit_tag 'login' %>
+<% end %>

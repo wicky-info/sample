@@ -1,0 +1,54 @@
+<h2 class="font-weight-bold">Admin</h2>
+<hr>
+
+<div class="row">
+<div class="col-sm">
+   <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#AdminModal">
+   <i class="fa fa-plus-square" aria-hidden="true"></i>
+   Tambah Admin
+  </button>
+</div><!-- akhir col-sm -->
+<div class="col-sm">
+  <%= render 'layouts/flash' %>
+</div><!-- akhir col-sm -->
+</div><!-- akhir dari row -->
+<br>
+<%= render 'tabel' %>
+<br>
+<!-- Modal -->
+<%= form_for [:admin, @admin], remote: true do |f| %>
+<div class="modal fade" id="AdminModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Admin</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form class="ui form">
+
+            <div class="field">
+              <label>Nama</label>
+             <%= f.text_field :nama, class: 'form-control admin_nama' %>
+            </div>
+            <div class="field">
+              <label>Email</label>
+             <%= f.email_field :email, class: 'form-control admin_email' %>
+            </div>
+            <div class="field">
+            <label>Password</label>
+            <%= f.password_field :password, class: 'form-control admin_password' %>
+            </div>
+        </form>
+      </div><!-- end modal body -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        <%= f.submit 'Simpan', class: 'btn btn-primary' %>
+      </div>    
+    </div>
+  </div>
+</div>
+<% end %>
+
